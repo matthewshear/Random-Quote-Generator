@@ -1,0 +1,184 @@
+/*********************************************************/
+/* GLOBAL STYLES                                         */
+/*********************************************************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  transition: background-color 1.5s;
+}
+
+/*********************************************************/
+/* QUOTE STYLES                                          */
+/*********************************************************/
+
+#quote-box {
+  width: 80%;
+  margin: 200px auto 0 auto;
+  line-height: 0.5;
+  transition: content 1.5s;
+}
+
+#quote-text {
+  position: relative;
+  margin: 0;
+  line-height: 1.1;
+} 
+
+#quote-text, #quote-text:before, #quote-text:after {
+  font-size: 4rem;
+}
+
+#quote-text:before, #quote-text:after {
+  line-height: 2.5rem;
+  position: absolute;
+}
+
+#quote-text:before {
+  content: "“";
+  top: .25em;
+  left: -.5em;
+}
+
+#quote-text:after {
+  content: "”";
+  bottom: 0.17em;
+  margin-left: .1em;
+  position: absolute;
+}
+
+#quote-source, #quote-tags {
+  font-size: 1.25rem;;
+  letter-spacing: 0.05em;
+  margin-top: 1rem;
+}
+
+#quote-source {
+  line-height: 1.1;
+  text-align: right;
+}
+
+#quote-source:before {
+  content: "— ";
+}
+
+button {
+  position: absolute;
+  width: 166px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  margin: 150px 0 0 -83px;
+  padding: 14px 20px;
+  border: solid 1px #ccc;
+  border-radius: 15px;  /* border radius tags */
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow:         3px 3px 15px 0px rgba(50, 50, 50, 0.5)
+  -moz-box-shadow:    3px 3px 15px 0px rgba(50, 50, 50, 0.5);
+  -webkit-box-shadow: 3px 3px 15px 0px rgba(50, 50, 50, 0.5);
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  /* prevent text overflowing to second line */
+  white-space: nowrap;
+  word-wrap: nowrap;  
+  /* set transition values */
+  transition: color .2s ease-in-out, background-color .2s ease-in-out, box-shadow .5s ease-in-out;
+}
+
+button:hover {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:focus {
+  outline: none;
+}
+
+/*********************************************************/
+/* MEDIA QUERIES STYLES                                         */
+/*********************************************************/
+
+@media (min-width: 1101px) and (max-width: 1400px) {
+
+  #quote-text, #quote-text:before, #quote-text:after {
+    font-size: 3rem;
+  }
+
+  #quote-text:before {
+    top: 0.12em;
+  }
+
+  #quote-text:after {
+    bottom: 0.12em;
+  }
+
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+
+  #quote-text, #quote-text:before, #quote-text:after {
+    font-size: 2rem;
+  }
+
+  #quote-text:before {
+    top: -0.08em;
+  }
+
+  #quote-text:after {
+    bottom: -0.08em;
+  }
+
+  #quote-source, #quote-tags {
+      font-size: 1.1rem;
+  }
+
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+
+  #quote-text, #quote-text:before, #quote-text:after {
+    font-size: 1.7rem;
+  }
+
+  #quote-text:before {
+    top: -0.18em;
+  }
+
+  #quote-text:after {
+    bottom: -0.18em;
+  }
+
+  #quote-source, #quote-tags {
+      font-size: 0.8rem;
+  }
+
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+
+  #quote-text, #quote-text:before, #quote-text:after {
+    font-size: 1rem;
+  }
+
+  #quote-text:before {
+    top: -0.68em;
+  }
+
+  #quote-text:after {
+    bottom: -0.68em;
+  }
+
+  #quote-source, #quote-tags {
+      font-size: 0.5rem;
+  }
+
+}
